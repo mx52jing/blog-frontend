@@ -8,7 +8,6 @@ const AppContainer = props => {
 	const {
 		isFetching
 	} = props
-	console.log(props);
 	return (
 		<>
 			<AppComponent/>
