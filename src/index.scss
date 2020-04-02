@@ -1,7 +1,16 @@
-body {
+body, html {
     background-color: #f6f6f6 !important;
 }
-
+#root {
+    height: 100%;
+}
+.section-wrapper {
+    min-height: 100%;
+    .poem {
+        padding-bottom: 84px;  // 这里应当是footer的固定高度
+        zoom: 1;
+    }
+}
 .container_wrapper__common {
     margin-top: 15px;
     .left-wrapper__common {

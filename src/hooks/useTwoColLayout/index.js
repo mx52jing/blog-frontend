@@ -22,7 +22,7 @@ const useTwoColLayout = props => {
 			md={8}
 			lg={6}
 			xl={5}>
-			<AuthorIntroduction />
+			<AuthorIntroduction/>
 			{children}
 		</Col>
 	)
