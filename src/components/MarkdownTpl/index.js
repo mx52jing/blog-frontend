@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import marked from 'marked'
-import highlight from 'highlight.js'
+import hljs from 'highlight.js'
 
 import 'highlight.js/styles/monokai-sublime.css'
 import './index.scss'
@@ -17,7 +17,7 @@ const MarkdownTpl = props => {
 		tables: true,
 		breaks: true,
 		smartLists: true,
-		highlight: code => highlight.highlightAuto(code).value
+		highlight: code => hljs.highlightAuto(code).value
 	})
 	const html = marked(content)
 	return (
@@ -27,4 +27,4 @@ const MarkdownTpl = props => {
 	)
 }
 
-export default MarkdownTpl
+export default memo(MarkdownTpl)

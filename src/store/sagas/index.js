@@ -1,5 +1,6 @@
 import { fork } from 'redux-saga/effects'
+import { articleListWatcher } from './articleSaga'
 
 export default function* rootSaga() {
-	console.log('root saga')
+    yield fork(articleListWatcher)
 }

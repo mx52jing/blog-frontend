@@ -1,8 +1,11 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
 import { List } from 'antd'
 import { CalendarOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import useTwoColLayout from '@hooks/useTwoColLayout'
+import { actions } from '@store/reducers/articleReducer'
 
 import './index.scss'
 
@@ -31,6 +34,16 @@ const articles = [
 ]
 
 const Article = props => {
+	const {
+		articleList,
+		fetchArticleList
+	} = props
+	console.log(props);
+	useEffect(() => {
+		if(!articleList.size) {
+			fetchArticleList()
+		}
+	}, [])
 	const { Container, LeftWrapper, RightWrapper } = useTwoColLayout()
 	return (
 		<div className="article-wrapper">
@@ -57,5 +70,13 @@ const Article = props => {
 	)
 }
 
-export default memo(Article)
+export default compose(
+	memo,
+	connect(
+		state => ({
+			articleList: state.getIn(['article', 'articleList'])
+		}),
+		actions
+	)
+)(Article)
 

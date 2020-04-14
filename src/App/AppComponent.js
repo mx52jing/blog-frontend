@@ -16,7 +16,7 @@ const AppComponent = () => (
 				<div className="section-wrapper">
 					<Header/>
 					<Switch>
-						<Route exact path="/article" component={Article}/>
+						<Route exact path="/articles" component={Article}/>
 						<Route path="/articleDetail" component={ArticleDetail}/>
 						<Redirect to="/"/>
 					</Switch>

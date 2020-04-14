@@ -8,7 +8,7 @@ const Home = props => {
 	return (
 		<div className="home-wrapper">
 			<div className="home-content">
-				<Link to='/article'>文章</Link>
+				<Link to='/articles'>文章</Link>
 			</div>
 			{
 				snowArr.map(item => (
