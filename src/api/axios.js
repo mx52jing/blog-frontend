@@ -1,18 +1,16 @@
 import axios from 'axios'
 
 const options = {
-	// baseURL: '',
+	baseURL: 'http://127.0.0.1:3002/frontend',
 	timeout: 6000,
-	withCredentials: true,
-	transformRequest: [data => {
-		return JSON.stringify(data)
-	}]
+	withCredentials: true
 }
 
 const instance = axios.create(options)
 
 instance.interceptors.request.use(
 	config => {
+
 		return config
 	},
 	error => Promise.reject(error)
