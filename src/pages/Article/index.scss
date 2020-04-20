@@ -18,12 +18,13 @@
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
     }
-    .ant-list-item {
-
-    }
     .ant-list-pagination {
         margin: 0;
         padding: 10px;
         text-align: center;
+    }
+    .go-detail {
+        padding: 10px 18px 0 0;
+        text-align: right;
     }
 }

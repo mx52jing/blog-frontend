@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col } from 'antd'
+import { Row, Col, BackTop } from 'antd'
 import AuthorIntroduction from '@components/AuthorIntroduction'
 
 const useTwoColLayout = props => {
@@ -27,12 +27,15 @@ const useTwoColLayout = props => {
 		</Col>
 	)
 	const Container = ({ children }) => (
-		<Row
-			className="container_wrapper__common"
-			type="flex"
-			justify="center">
-			{children}
-		</Row>
+		<>
+			<Row
+				className="container_wrapper__common"
+				type="flex"
+				justify="center">
+				{children}
+			</Row>
+			<BackTop/>
+		</>
 	)
 	return {
 		Container,

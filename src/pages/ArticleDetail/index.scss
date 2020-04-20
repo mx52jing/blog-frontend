@@ -2,9 +2,34 @@
     .left-wrapper__common {
         padding: 20px 10px 10px;
     }
+    .breadcrumb {
+        padding: 10px;
+        background-color: #e1f0ff
+    }
     .article-title {
+        font-size: 26px;
+        font-weight: 700;
+        padding: 15px 0;
         text-align: center;
-        font-size: 18px;
-        color: #1890ff;
+    }
+    .icons-info {
+        font-size: 12px;
+        color: #a9a9a9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .article-content {
+        padding: 15px;
+    }
+    .anticon-calendar {
+        margin-right: 5px;
+    }
+    .category {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding: 12px 0;
+        border-bottom: 1px dashed #a9a9a9;
     }
 }

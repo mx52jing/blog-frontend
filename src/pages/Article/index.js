@@ -1,7 +1,7 @@
 import React, { memo, useEffect, useCallback } from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import { List, Pagination, Row } from 'antd'
+import { List } from 'antd'
 import { CalendarOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import useTwoColLayout from '@hooks/useTwoColLayout'
@@ -43,13 +43,16 @@ const Article = props => {
                         renderItem={item => (
                             <Item>
                                 <div className="list-item-title">
-                                    <Link to={`articleDetail/${item.id}`}>{item.title}</Link>
+                                    <Link to={`articleDetail/${item._id}`}>{item.title}</Link>
                                 </div>
                                 <div className="list-item-icon">
                                     <CalendarOutlined/>2020-04-01
                                 </div>
                                 <div className="list-item-content">
                                     {item.content}
+                                </div>
+								<div className="go-detail">
+									<Link to={`articleDetail/${item._id}`}>查看全文</Link>
                                 </div>
                             </Item>
                         )}/>
