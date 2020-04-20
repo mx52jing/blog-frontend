@@ -10,7 +10,6 @@ const instance = axios.create(options)
 
 instance.interceptors.request.use(
 	config => {
-
 		return config
 	},
 	error => Promise.reject(error)

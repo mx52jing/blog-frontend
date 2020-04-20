@@ -12,6 +12,18 @@
     }
     .list-item-content {
         color: #777;
-        padding: 5px;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .ant-list-item {
+
+    }
+    .ant-list-pagination {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
     }
 }

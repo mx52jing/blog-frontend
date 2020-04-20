@@ -8,9 +8,9 @@ const useTwoColLayout = props => {
 			className='left-wrapper__common'
 			xs={24}
 			sm={24}
-			md={15}
-			lg={17}
-			xl={13}>
+			md={10}
+			lg={15}
+			xl={14}>
 			{children}
 		</Col>
 	)
@@ -19,7 +19,7 @@ const useTwoColLayout = props => {
 			className='right-wrapper__common'
 			xs={0}
 			sm={0}
-			md={8}
+			md={6}
 			lg={6}
 			xl={5}>
 			<AuthorIntroduction/>

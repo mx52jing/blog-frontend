@@ -1,18 +1,22 @@
 import { fromJS } from 'immutable'
-import { FETCH_ARTICLE_LIST, UPDATE_ARTICLE_LIST } from '../actions'
+import { FETCH_ARTICLE_DATA, UPDATE_ARTICLE_DATA } from '../actions'
 
 const initialState = fromJS({
-	articleList: []
+	articleData: {
+		total: 0,
+		page: 1,
+		data: []
+	}
 })
 
 export const actions = {
-	fetchArticleList: () => ({ type: FETCH_ARTICLE_LIST })
+	fetchArticleData: payload => ({ type: FETCH_ARTICLE_DATA, payload })
 }
 
 export const reducer = (state = initialState, action) => {
 	switch (action.type) {
-		case UPDATE_ARTICLE_LIST:
-			return state.set('articleList', action.data)
+		case UPDATE_ARTICLE_DATA:
+			return state.set('articleData', action.data)
 		default:
 			return state
 	}

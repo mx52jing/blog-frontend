@@ -7,6 +7,7 @@ const Footer = Loadable(() => import('@pages/Footer'))
 const Home = Loadable(() => import('@pages/Home'))
 const Article = Loadable(() => import('@pages/Article'))
 const ArticleDetail = Loadable(() => import('@pages/ArticleDetail'))
+const Category = Loadable(() => import('@pages/Category'))
 
 const AppComponent = () => (
 	<Router>
@@ -16,8 +17,9 @@ const AppComponent = () => (
 				<div className="section-wrapper">
 					<Header/>
 					<Switch>
-						<Route exact path="/articles" component={Article}/>
-						<Route path="/articleDetail" component={ArticleDetail}/>
+						<Route path="/articles" component={Article}/>
+						<Route path="/articleDetail/:id" component={ArticleDetail}/>
+						<Route path='/categories' component={Category}/>
 						<Redirect to="/"/>
 					</Switch>
 					{/* 为了做 Sticky Footer */}

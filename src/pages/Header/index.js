@@ -12,17 +12,14 @@ const Header = () => {
 					<Col className='header-title' span={4} offset={3}>
 						哈萨Q's Blog
 					</Col>
-					<Col span={2} offset={6}>
+					<Col span={2} offset={9}>
 						<Link to='/'>首页</Link>
 					</Col>
 					<Col span={2}>
-						<Link to='/article'>文章</Link>
+						<Link to='/articles'>文章</Link>
 					</Col>
 					<Col span={2}>
 						<Link to='/categories'>分类</Link>
-					</Col>
-					<Col span={2}>
-						<Link to='/tags'>标签</Link>
 					</Col>
 				</Row>
 			</div>
