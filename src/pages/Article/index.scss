@@ -6,9 +6,12 @@
         font-size: 18px;
         color: #1e90ff;
     }
-    .list-item-icon {
+    .icons-info {
         padding: 5px 0;
         color: #AAA;
+        .anticon {
+            margin-right: 5px;
+        }
     }
     .list-item-content {
         color: #777;

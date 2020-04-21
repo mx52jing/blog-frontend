@@ -2,10 +2,11 @@ import React, { memo, useEffect, useCallback } from 'react'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { List } from 'antd'
-import { CalendarOutlined } from '@ant-design/icons'
 import { Link } from 'react-router-dom'
 import useTwoColLayout from '@hooks/useTwoColLayout'
+import IconAndTag from '@components/IconAndTag'
 import { actions } from '@store/reducers/articleReducer'
+import { addPv } from '@api/request'
 
 import './index.scss'
 
@@ -24,6 +25,10 @@ const Article = props => {
     const handlePageChange = useCallback((page, pageSize) => {
         fetchArticleData({ page, pageSize })
     }, [])
+    /* 增加浏览量 */
+    const handleAddPv = useCallback(id => {
+		addPv(id)
+	}, [])
     return (
         <div className="article-wrapper">
             <Container>
@@ -43,16 +48,19 @@ const Article = props => {
                         renderItem={item => (
                             <Item>
                                 <div className="list-item-title">
-                                    <Link to={`articleDetail/${item._id}`}>{item.title}</Link>
+                                    <Link
+                                        onClick={() => handleAddPv(item._id)}
+                                        to={`articleDetail/${item._id}`}>
+                                        {item.title}
+                                    </Link>
                                 </div>
-                                <div className="list-item-icon">
-                                    <CalendarOutlined/>2020-04-01
-                                </div>
-                                <div className="list-item-content">
-                                    {item.content}
-                                </div>
+								<IconAndTag {...item}/>
 								<div className="go-detail">
-									<Link to={`articleDetail/${item._id}`}>查看全文</Link>
+									<Link
+										onClick={() => handleAddPv(item._id)}
+                                        to={`articleDetail/${item._id}`}>
+                                        查看全文
+                                    </Link>
                                 </div>
                             </Item>
                         )}/>

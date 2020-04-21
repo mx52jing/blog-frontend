@@ -1,6 +1,7 @@
 import React, { memo } from 'react'
 import { Affix, Row, Col } from 'antd'
 import { Link } from 'react-router-dom'
+import SearchWrapper from '../SearchWrapper'
 
 import './index.scss'
 
@@ -12,7 +13,7 @@ const Header = () => {
 					<Col className='header-title' span={4} offset={3}>
 						哈萨Q's Blog
 					</Col>
-					<Col span={2} offset={9}>
+					<Col span={2} offset={0}>
 						<Link to='/'>首页</Link>
 					</Col>
 					<Col span={2}>
@@ -20,6 +21,9 @@ const Header = () => {
 					</Col>
 					<Col span={2}>
 						<Link to='/categories'>分类</Link>
+					</Col>
+					<Col offset={4}>
+						<SearchWrapper />
 					</Col>
 				</Row>
 			</div>
