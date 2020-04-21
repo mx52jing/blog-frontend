@@ -34,6 +34,7 @@ const useTwoColLayout = props => {
 				justify="center">
 				{children}
 			</Row>
+            {/* 该组件在严格模式下会报警告Using UNSAFE_componentWillReceiveProps in strict mode is not recommended and may indicate bugs in your code. */}
 			<BackTop/>
 		</>
 	)
