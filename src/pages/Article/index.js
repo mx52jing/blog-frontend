@@ -55,6 +55,9 @@ const Article = props => {
                                     </Link>
                                 </div>
 								<IconAndTag {...item}/>
+                                <div className="list-item-content">
+                                    {item.introduction}
+                                </div>
 								<div className="go-detail">
 									<Link
 										onClick={() => handleAddPv(item._id)}

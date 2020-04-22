@@ -10,7 +10,6 @@ export default memo(({ createAt, category, pv }) => (
 		<div className="icons-info">
 			<span className="icon-item">
 				<CalendarOutlined/>
-				发表于
 				<span>{dateFormat(createAt, 'yyyy-MM-dd')}</span>
 			</span>
 			<span className="icon-item">
