@@ -1,0 +1,40 @@
+.archives-wrapper {
+    .archives-item {
+        .title {
+            color: #19B5FE;
+            font-family: Courier,Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-size: 25px;
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 36px;
+        }
+        .item-info {
+            display: flex;
+            line-height: 30px;
+            margin-bottom: 5px;
+            position: relative;
+            border-bottom: 1px dashed #e6dfdf;
+            color: #666;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: #333;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -15px;
+            }
+            .link {
+                flex: 1;
+                padding-left: 10px;
+                color: #666;
+            }
+            .anticon-eye {
+                margin-right: 5px;
+            }
+        }
+    }
+}

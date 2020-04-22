@@ -22,7 +22,10 @@ const Header = () => {
 					<Col span={2}>
 						<Link to='/categories'>分类</Link>
 					</Col>
-					<Col offset={4}>
+					<Col span={2}>
+						<Link to='/archives'>归档</Link>
+					</Col>
+					<Col offset={2}>
 						<SearchWrapper />
 					</Col>
 				</Row>
