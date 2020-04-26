@@ -1,7 +1,8 @@
 import axios from 'axios'
 
-const options = {
-	baseURL: 'http://127.0.0.1:3002/frontend',
+const url = process.env.NODE_ENV === 'development' ? 'http://127.0.0.1:3002/frontend' : '/api',
+	options = {
+	baseURL: url,
 	timeout: 6000,
 	withCredentials: true
 }
