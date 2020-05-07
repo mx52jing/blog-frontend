@@ -1,9 +1,9 @@
 import React, { memo, useEffect } from 'react'
+import { compose } from 'redux'
+import { connect } from 'react-redux'
 import { Empty } from 'antd'
 import useTwoColLayout from '@hooks/useTwoColLayout'
 import { actions } from "@store/reducers/archivesReducer"
-import { compose } from 'redux'
-import { connect } from 'react-redux'
 import ArchivesItem from './ArchivesItem'
 
 import './index.scss'
