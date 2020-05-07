@@ -12,7 +12,6 @@ const Archives = props => {
 	const { Container, LeftWrapper, RightWrapper } = useTwoColLayout(),
 		{ archives, fetchArchives } = props,
 		{ total, data } = archives.toJS()
-	console.log(archives.toJS());
 	useEffect(() => {
 		if(!data.length) {
 			fetchArchives()
