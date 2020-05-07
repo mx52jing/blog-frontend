@@ -11,7 +11,7 @@ import './index.scss'
 const Archives = props => {
 	const { Container, LeftWrapper, RightWrapper } = useTwoColLayout(),
 		{ archives, fetchArchives } = props,
-		{ total, data } = archives.toJS()
+		{ data } = archives.toJS()
 	useEffect(() => {
 		if(!data.length) {
 			fetchArchives()
