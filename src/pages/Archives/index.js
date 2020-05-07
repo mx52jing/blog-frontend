@@ -28,7 +28,7 @@ const Archives = props => {
 									key={item.id}
 									{...item}/>
 							)) :
-							<Empty />
+							<Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>
 					}
 				</LeftWrapper>
 				<RightWrapper></RightWrapper>

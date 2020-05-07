@@ -30,7 +30,7 @@ const Category = props => {
                                     {item.name}
                                 </Tag>
                             )) :
-                            <Empty/>
+                            <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>
                     }
                 </LeftWrapper>
                 <RightWrapper></RightWrapper>
