@@ -12,4 +12,7 @@
     .ant-input {
         padding: 0;
     }
+    .ant-input-search-icon:before {
+        border-left: none;
+    }
 }
