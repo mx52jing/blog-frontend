@@ -1,6 +1,25 @@
 .nav-bar__wrapper {
     margin-top: 15px;
+    background-color: #fff;
+    .title {
+        width: 96%;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 8px 0;
+        border-bottom: 2px solid #f0f0f0;
+        margin: 0 auto 5px auto;
+    }
+    .ant-affix {
+        background-color: #fff;
+    }
     .ant-anchor-wrapper {
         margin-left: 0;
+        padding: 10px 0 10px 10px;
+    }
+    .ant-anchor {
+        a {
+            font-size: 13px;
+        }
     }
 }
