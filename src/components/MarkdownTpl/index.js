@@ -5,12 +5,10 @@ import hljs from 'highlight.js'
 import 'highlight.js/styles/monokai-sublime.css'
 import './index.scss'
 
-const MarkdownTpl = props => {
-	const {
-		content
-	} = props
-	marked.setOptions({
-		renderer: new marked.Renderer(),
+const MarkdownTpl = ({ content }) => {
+    const renderer = new marked.Renderer()
+    marked.setOptions({
+		renderer,
 		gfm: true,
 		pedantic: false,
 		sanitize: false,
@@ -23,7 +21,8 @@ const MarkdownTpl = props => {
 	return (
 		<div
 			dangerouslySetInnerHTML={{ __html: html }}
-			className="markdown-content"></div>
+			className="markdown-content">
+		</div>
 	)
 }
 

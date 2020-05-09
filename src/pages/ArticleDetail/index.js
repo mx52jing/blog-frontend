@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import { Breadcrumb } from 'antd'
 import useTwoColLayout from '@hooks/useTwoColLayout'
 import MarkdownTpl from '@components/MarkdownTpl'
+import NavBar from '@components/NavBar'
 import IconAndTag from '@components/IconAndTag'
 import { actions } from '@store/reducers/articleReducer'
 
@@ -46,7 +47,9 @@ const ArticleDetail = props => {
 						<MarkdownTpl content={content}/>
 					</div>
 				</LeftWrapper>
-				<RightWrapper />
+				<RightWrapper>
+                    <NavBar content={content}/>
+				</RightWrapper>
 			</Container>
 		</div>
 	)
