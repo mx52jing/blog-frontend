@@ -1,0 +1,22 @@
+.category-detail_wrapper {
+    .category-detail-content {
+        .name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-right: 2px;
+        }
+    }
+    .info {
+        padding-top: 20px;
+    }
+    .ant-timeline-item-content {
+        border-bottom: 1px dashed #e6dfdf;
+        padding-bottom: 8px;
+        .time {
+            margin-right: 15px;
+        }
+    }
+    .ant-timeline-item-last > .ant-timeline-item-content {
+        min-height: auto;
+    }
+}

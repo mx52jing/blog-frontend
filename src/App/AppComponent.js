@@ -8,6 +8,7 @@ const Home = Loadable(() => import('@pages/Home'))
 const Article = Loadable(() => import('@pages/Article'))
 const ArticleDetail = Loadable(() => import('@pages/ArticleDetail'))
 const Category = Loadable(() => import('@pages/Category'))
+const CategoryDetail = Loadable(() => import('@pages/CategoryDetail'))
 const Archives = Loadable(() => import('@pages/Archives'))
 
 const AppComponent = () => (
@@ -20,7 +21,8 @@ const AppComponent = () => (
 					<Switch>
 						<Route path="/articles" component={Article}/>
 						<Route path="/articleDetail/:id" component={ArticleDetail}/>
-						<Route path='/categories' component={Category}/>
+						<Route exact path='/categories' component={Category}/>
+						<Route path='/categories/:name' component={CategoryDetail}/>
 						<Route path='/archives' component={Archives}/>
 						<Redirect to="/"/>
 					</Switch>

@@ -1,7 +1,7 @@
 import { fork } from 'redux-saga/effects'
 import { articleListWatcher, articleContentWatcher } from './articleSaga'
-import { categoryWatcher } from './category'
-import { archivesWatcher } from './archives'
+import { categoryWatcher } from './categorySaga'
+import { archivesWatcher } from './archivesSaga'
 
 export default function* rootSaga() {
     yield fork(articleListWatcher)

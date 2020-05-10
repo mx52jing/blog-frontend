@@ -1,5 +1,18 @@
 .category-wrapper {
+    .category-title {
+        text-align: center;
+        .name {
+            font-family: Courier,Menlo,Monaco,Consolas,"Courier New",monospace;
+            font-weight: 700;
+            font-size: 22px;
+        }
+    }
     .ant-tag {
+        padding: 6px 8px;
         margin-bottom: 12px;
+        border-radius: 4px;
+        a {
+            color: inherit;
+        }
     }
 }
