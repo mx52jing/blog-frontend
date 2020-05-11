@@ -5,12 +5,12 @@ import { dateFormat } from '@api/utils'
 
 import './index.scss'
 
-export default memo(({ createAt, category, pv }) => (
+export default memo(({ createdAt, category, pv }) => (
 	<>
 		<div className="icons-info">
 			<span className="icon-item">
 				<CalendarOutlined/>
-				<span>{dateFormat(createAt, 'yyyy-MM-dd')}</span>
+				<span>{dateFormat(createdAt, 'yyyy-MM-dd')}</span>
 			</span>
 			<span className="icon-item">
 				<EyeOutlined />
