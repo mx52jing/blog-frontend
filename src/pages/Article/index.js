@@ -50,7 +50,7 @@ const Article = props => {
                                 <div className="list-item-title">
                                     <Link
                                         onClick={() => handleAddPv(item._id)}
-                                        to={`articleDetail/${item._id}`}>
+                                        to={`articles/${item._id}`}>
                                         {item.title}
                                     </Link>
                                 </div>
@@ -61,7 +61,7 @@ const Article = props => {
 								<div className="go-detail">
 									<Link
 										onClick={() => handleAddPv(item._id)}
-                                        to={`articleDetail/${item._id}`}>
+                                        to={`articles/${item._id}`}>
                                         查看全文
                                     </Link>
                                 </div>

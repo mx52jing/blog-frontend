@@ -19,8 +19,8 @@ const AppComponent = () => (
 				<div className="section-wrapper">
 					<Header/>
 					<Switch>
-						<Route path="/articles" component={Article}/>
-						<Route path="/articleDetail/:id" component={ArticleDetail}/>
+						<Route exact path="/articles" component={Article}/>
+						<Route path="/articles/:id" component={ArticleDetail}/>
 						<Route exact path='/categories' component={Category}/>
 						<Route path='/categories/:name' component={CategoryDetail}/>
 						<Route path='/archives' component={Archives}/>

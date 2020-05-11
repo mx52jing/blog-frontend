@@ -15,7 +15,7 @@ const ArchivesItem = ({ _id, children }) => {
 							key={item.id}>
 							<time>{dateFormat(item.createdAt, 'MM-dd')}</time>
 							<Link
-								to={`/articleDetail/${item.id}`}
+								to={`/articles/${item.id}`}
 								className="link">
 								{item.title}
 							</Link>

@@ -40,7 +40,7 @@ const CategoryDetail = props => {
 												{dateFormat(item.createdAt)}
 											</span>
                                                     <span className="title">
-												<Link to={`/articleDetail/${item._id}`}>
+												<Link to={`/articles/${item._id}`}>
 													{item.title}
 												</Link>
 											</span>
