@@ -1,8 +1,8 @@
-import React, { memo, useEffect } from 'react'
+import React, { memo, useEffect, useCallback } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { compose } from 'redux'
 import { connect } from 'react-redux'
-import { Timeline, Empty } from 'antd';
+import { Timeline, Empty, Pagination } from 'antd';
 import useTwoColLayout from '@hooks/useTwoColLayout'
 import { actions } from "@store/reducers/categoryReducer"
 import { dateFormat } from '@api/utils'
@@ -14,10 +14,18 @@ const { Item } = Timeline
 const CategoryDetail = props => {
     const { Container, LeftWrapper, RightWrapper } = useTwoColLayout()
     const { category, fetchCategory } = props,
-        list = category.toJS(),
+        categoryData = category.toJS(),
+        { data: list = [], total, page } = categoryData,
         params = useParams()
     useEffect(() => {
-        fetchCategory(params)
+        fetchCategory({ ...params, page: 1, pageSize: 20 })
+    }, [])
+    const handlePageChange = useCallback((page, pageSize) => {
+        fetchCategory({
+            ...params,
+            page,
+            pageSize
+        })
     }, [])
     return (
         <div className="category-detail_wrapper">
@@ -57,6 +65,16 @@ const CategoryDetail = props => {
                             )
                         }
                     </div>
+                    {
+                        total > 20 ? (
+                            <Pagination
+                                onChange={handlePageChange}
+                                total={total}
+                                current={page}
+                                pageSize={20}
+                            />
+                        ) : null
+                    }
                 </LeftWrapper>
                 <RightWrapper></RightWrapper>
             </Container>

@@ -32,4 +32,9 @@
     .ant-timeline-item-last > .ant-timeline-item-content {
         min-height: auto;
     }
+    .ant-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
