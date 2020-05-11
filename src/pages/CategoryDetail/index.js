@@ -35,15 +35,16 @@ const CategoryDetail = props => {
                                         {
                                             list.map(item => (
                                                 <Item
+                                                    className="item-info"
                                                     key={item._id}>
-											<span className="time">
-												{dateFormat(item.createdAt)}
-											</span>
+											        <span className="time">
+												        {dateFormat(item.createdAt)}
+											        </span>
                                                     <span className="title">
-												<Link to={`/articles/${item._id}`}>
-													{item.title}
-												</Link>
-											</span>
+												        <Link to={`/articles/${item._id}`}>
+													        {item.title}
+												        </Link>
+											        </span>
                                                 </Item>
                                             ))
                                         }

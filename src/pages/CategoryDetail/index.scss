@@ -9,11 +9,24 @@
     .info {
         padding-top: 20px;
     }
-    .ant-timeline-item-content {
-        border-bottom: 1px dashed #e6dfdf;
-        padding-bottom: 8px;
+    ul {
+        padding-left: 16px;
+    }
+    .item-info {
+        display: flex;
+        margin-bottom: 0;
+        position: relative;
+        color: #666;
+        line-height: 22px;
+        padding-bottom: 10px;
         .time {
             margin-right: 15px;
+        }
+        .ant-timeline-item-content {
+            flex: 1;
+            display: flex;
+            border-bottom: 1px dashed #e6dfdf;
+            padding: 1px 0 8px;
         }
     }
     .ant-timeline-item-last > .ant-timeline-item-content {
