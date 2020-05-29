@@ -9,11 +9,14 @@
         font-size: 24px;
     }
     p,
-    ui li {
+    ul li {
         line-height: 28px;
         code {
             line-height: 22px;
         }
+    }
+    ul {
+        padding-left: 20px;
     }
     strong {
         font-weight: 700;
