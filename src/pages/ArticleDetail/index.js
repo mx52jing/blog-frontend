@@ -17,7 +17,7 @@ const ArticleDetail = props => {
 	const { Container, LeftWrapper, RightWrapper } = useTwoColLayout(),
 		{ id } = useParams()
 	const { fetchArticleContent, articleContent } = props,
-		{ title, category, content = '', createAt, pv } = articleContent.toJS()
+		{ title, category, content = '', createdAt, pv } = articleContent.toJS()
 	useEffect(() => {
 		if(!!id) {
 			fetchArticleContent(id)
@@ -42,7 +42,7 @@ const ArticleDetail = props => {
 					<IconAndTag
 						pv={pv}
 						category={category}
-						createAt={createAt}/>
+						createdAt={createdAt}/>
 					<div className="article-content">
 						<MarkdownTpl content={content}/>
 					</div>
