@@ -10,7 +10,7 @@
     "antd": "^4.1.0",
     "axios": "^0.19.2",
     "customize-cra": "^0.9.1",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.1.2",
     "immutable": "^4.0.0-rc.12",
     "marked": "^0.8.2",
     "react": "^16.13.1",
