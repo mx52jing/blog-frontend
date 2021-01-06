@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "add": "^2.0.6",
     "antd": "^4.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "customize-cra": "^0.9.1",
     "highlight.js": "^9.18.1",
     "immutable": "^4.0.0-rc.12",
