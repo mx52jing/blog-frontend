@@ -12,7 +12,7 @@
     "customize-cra": "^0.9.1",
     "highlight.js": "^9.18.1",
     "immutable": "^4.0.0-rc.12",
-    "marked": "^0.8.2",
+    "marked": "^4.0.10",
     "react": "^16.13.1",
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.13.1",
